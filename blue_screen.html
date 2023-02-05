@@ -12,7 +12,110 @@
     <title>Weather App</title>
 </head>
 <body>
-    <h1>Hello 0101</h1>
+    <button class="theme-button" id="blue-screen">Blue screen</button>
+    <button class="theme-button" id="terminal">Terminal</button>
+    <button class="theme-button" id="console">Console</button>
+    <button class="theme-button" id="holo">Holo</button>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="card">
+                    <div class="card-header">Location</div>
+                    <div class="card-body">
+                        <p id="country">Sweden</p>
+                        <p id="city">Stockholm</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">Info</div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                  <ul>
+                                    <li>L</li>
+                                    <li>H</li>
+                                    <li>Wind</li>
+                                    <li>Humidity</li>
+                                  </ul>
+                                </div>
+                                <div class="col">
+                                    <ul>
+                                    <li><span id="low"></span><span class="unit">ºc</span></li>
+                                    <li><span id="high"></span><span class="unit">ºf</span></li>
+                                    <li><span id="wind"></span> km/h</li>
+                                    <li><span id="humidity"></span>%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="change-button" id="cel-button">ºc</button>
+                <button class="change-button" id="fah-button">ºf</button>
+
+            </div>
+
+            <div class="col">
+
+                <div class="card">
+                    <p><span>01</span><span class="unit">ºc</span></p>
+                </div>
+
+                <form class="search" id="search-form">
+                    <input class="form-control" type="text">
+                    <button id="search-button" type="submit">search</button>
+                </form>
+
+            </div>
+
+            <div class="col">
+
+                <div class="card">
+                    <div class="card-header" id="date">2023-02-06</div>
+                    <div class="card-body">
+                        <h3 id="today">Monday</h3>
+                        <h2 id="time">00:00:00</h2>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">Forcast</div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <ul>
+                                        <li class="li-week" id="tomorrow">TUE</li>
+                                        <li class="li-week" id="day-after-tomorrow">WED</li>
+                                        <li class="li-week" id="third-day">THU</li>
+                                        <li class="li-week" id="fourth-day">FRI</li>
+                                        <li class="li-week" id="fifth-day">SAT</li>
+                                        <li class="li-week" id="sixth-day">SUN</li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <li><span id="tom-degree">0</span><span class="unit">ºc</span></li>
+                                    <li><span id="day-degree">0</span><span class="unit">ºc</span></li>
+                                    <li><span id="thi-degree">0</span><span class="unit">ºc</span></li>
+                                    <li><span id="fou-degree">0</span><span class="unit">ºc</span></li>
+                                    <li><span id="fif-degree">0</span><span class="unit">ºc</span></li>
+                                    <li><span id="six-degree">0</span><span class="unit">ºc</span></li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
     <script src="blue_screen_src/blue.js"></script>
 </body>
 </html>
