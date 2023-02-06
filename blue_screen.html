@@ -17,13 +17,13 @@
     <button class="theme-button" id="console">Console</button>
     <button class="theme-button" id="holo">Holo</button>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col">
+            <div class="col main-col">
 
                 <div class="card">
                     <div class="card-header">Location</div>
-                    <div class="card-body">
+                    <div class="card-body info-card">
                         <p id="country">Sweden</p>
                         <p id="city">Stockholm</p>
                     </div>
@@ -55,35 +55,46 @@
                     </div>
                 </div>
 
-                <button class="change-button" id="cel-button">ºc</button>
-                <button class="change-button" id="fah-button">ºf</button>
-
-            </div>
-
-            <div class="col">
-
-                <div class="card">
-                    <p><span>01</span><span class="unit">ºc</span></p>
+                <div class="unit-button">
+                    <button class="change-button" id="cel-button">ºc</button>
+                    <button class="change-button" id="fah-button">ºf</button>
                 </div>
 
-                <form class="search" id="search-form">
-                    <input class="form-control" type="text">
-                    <button id="search-button" type="submit">search</button>
-                </form>
+            </div>
+
+            <div class="col main-col">
+
+                <div class="card temp-card">
+                    <p id="temp-num"><span id="temp">01</span><span  id="temp-unit" class="unit"> ºc</span></p>
+                </div>
+
+                <!--<form class="search" id="search-form" action="">
+                    <input class="form-control" type="text" placeholder="city. . .">
+                    <input id="search-button" type="submit" value="submit"></input>
+                </form>-->
+
+                <div class="search-wrap">
+                    <div class="search-box">
+                        <div class="btn btn-common">
+                            <i class="fas fa-search">search</i>
+                        </div>
+                        <input type="text" class="input" placeholder="city. . .">
+                    </div>
+                </div>
 
             </div>
 
-            <div class="col">
+            <div class="col main-col">
 
                 <div class="card">
                     <div class="card-header" id="date">2023-02-06</div>
                     <div class="card-body">
-                        <h3 id="today">Monday</h3>
-                        <h2 id="time">00:00:00</h2>
+                        <p id="today">Monday</p>
+                        <p id="time">00:00:00</p>
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card text-center">
                     <div class="card-header">Forcast</div>
                     <div class="card-body">
                         <div class="container">
