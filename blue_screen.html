@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
 </head>
 <body>
@@ -45,8 +46,8 @@
                                 <div class="col">
                                     <ul>
                                     <li><span id="low"></span><span class="unit">ºc</span></li>
-                                    <li><span id="high"></span><span class="unit">ºf</span></li>
-                                    <li><span id="wind"></span> km/h</li>
+                                    <li><span id="high"></span><span class="unit">ºc</span></li>
+                                    <li><span id="wind"></span>km/h</li>
                                     <li><span id="humidity"></span>%</li>
                                     </ul>
                                 </div>
@@ -58,6 +59,7 @@
                 <div class="unit-button">
                     <button class="change-button" id="cel-button">ºc</button>
                     <button class="change-button" id="fah-button">ºf</button>
+                    <button class="change-button" id="current-btn">current</button>
                 </div>
 
             </div>
@@ -65,18 +67,14 @@
             <div class="col main-col">
 
                 <div class="card temp-card">
+                    <p class="description"></p>
                     <p id="temp-num"><span id="temp">01</span><span  id="temp-unit" class="unit"> ºc</span></p>
                 </div>
-
-                <!--<form class="search" id="search-form" action="">
-                    <input class="form-control" type="text" placeholder="city. . .">
-                    <input id="search-button" type="submit" value="submit"></input>
-                </form>-->
 
                 <div class="search-wrap">
                     <div class="search-box">
                         <div class="btn btn-common">
-                            <i class="fas fa-search">search</i>
+                            <p class="fas">search</p>
                         </div>
                         <input type="text" class="input" placeholder="city. . .">
                     </div>
@@ -87,9 +85,9 @@
             <div class="col main-col">
 
                 <div class="card">
-                    <div class="card-header" id="date">2023-02-06</div>
+                    <div class="card-header" id="date"></div>
                     <div class="card-body">
-                        <p id="today">Monday</p>
+                        <p id="today"></p>
                         <p id="time">00:00:00</p>
                     </div>
                 </div>
@@ -101,12 +99,12 @@
                             <div class="row">
                                 <div class="col">
                                     <ul>
-                                        <li class="li-week" id="tomorrow">TUE</li>
-                                        <li class="li-week" id="day-after-tomorrow">WED</li>
-                                        <li class="li-week" id="third-day">THU</li>
-                                        <li class="li-week" id="fourth-day">FRI</li>
-                                        <li class="li-week" id="fifth-day">SAT</li>
-                                        <li class="li-week" id="sixth-day">SUN</li>
+                                        <li class="li-week" id="tomorrow"></li>
+                                        <li class="li-week" id="day-after-tomorrow"></li>
+                                        <li class="li-week" id="third-day"></li>
+                                        <li class="li-week" id="fourth-day"></li>
+                                        <li class="li-week" id="fifth-day"></li>
+                                        <li class="li-week" id="sixth-day"></li>
                                     </ul>
                                 </div>
                                 <div class="col">

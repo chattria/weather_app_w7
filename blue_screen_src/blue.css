@@ -55,7 +55,6 @@ li {
     padding-left: 0;
     line-height: 2;
     font-size: 26px;
-
 }
 
 .card-header {
@@ -95,7 +94,7 @@ p {
 }
 
 .temp-card p {
-    padding: 70px 50px;
+    padding-bottom: 40px;
     margin: 0;
 }
 
@@ -103,6 +102,13 @@ p {
    font-size: 120px;
 }
 
+.card .description {
+    padding: 20px;
+    font-size: 35px;
+    text-transform: lowercase;
+}
+
+/*Button*/
 .search-wrap {
     width: 500px;
     margin: 0 auto;
@@ -111,7 +117,7 @@ p {
 .search-wrap .search-box {
     position: relative;
     width: 500px;
-    height: 50px;
+    height: 40px;
 }
 
 .search-wrap .search-box .input {
@@ -151,11 +157,16 @@ p {
     border-radius: 4px;
 }
 
-.search-wrap .search_box .btn.btn-common .fas{
+.search-wrap .search_box .btn.btn-common .fas {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	color: #fff;
 	font-size: 20px;
+}
+
+.fas {
+    font-size: 16px;
+    margin: 0 auto;
 }
