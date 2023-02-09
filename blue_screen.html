@@ -22,15 +22,15 @@
         <div class="row">
             <div class="col main-col">
 
-                <div class="card">
+                <div class="card"> <!--Location-->
                     <div class="card-header">Location</div>
                     <div class="card-body info-card">
-                        <p id="country">Sweden</p>
-                        <p id="city">Stockholm</p>
+                        <p id="country"></p>
+                        <p id="city"></p>
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card"> <!--Info-->
                     <div class="card-header">Info</div>
                     <div class="card-body">
                         <div class="container">
@@ -56,7 +56,7 @@
                     </div>
                 </div>
 
-                <div class="unit-button">
+                <div class="unit-button"> <!--Buttons-->
                     <button class="change-button" id="cel-button">ºc</button>
                     <button class="change-button" id="fah-button">ºf</button>
                     <button class="change-button" id="current-btn">current</button>
@@ -66,35 +66,31 @@
 
             <div class="col main-col">
 
-                <div class="card temp-card">
+                <div class="card temp-card"> <!--Temperatur and description-->
                     <p class="description"></p>
                     <p id="temp-num"><span id="temp">01</span><span  id="temp-unit" class="unit"> ºc</span></p>
                 </div>
 
-                <div class="search-wrap">
-                    <div class="search-box">
-                        <div class="btn btn-common">
-                            <p class="fas">search</p>
-                        </div>
-                        <input type="text" class="input" placeholder="city. . .">
-                    </div>
+                <div class="search-city"> <!--Search-->
+                    <button id="search-btn" type="submit">search</button>
+                    <input type="search" placeholder=" city. . ." id="city-input" class="form-cont-rol">
                 </div>
 
             </div>
 
             <div class="col main-col">
 
-                <div class="card">
+                <div class="card"> <!--Today-->
                     <div class="card-header" id="date"></div>
                     <div class="card-body">
                         <p id="today"></p>
-                        <p id="time">00:00:00</p>
+                        <p id="time"></p>
                     </div>
                 </div>
 
-                <div class="card text-center">
-                    <div class="card-header">Forcast</div>
-                    <div class="card-body">
+                <div class="card"> <!--Forcast-->
+                    <div class="card-header" id="card-forcast">Forcast</div>
+                    <div class="card-body text-center">
                         <div class="container">
                             <div class="row">
                                 <div class="col">
