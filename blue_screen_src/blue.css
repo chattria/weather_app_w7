@@ -1,26 +1,38 @@
+:root {
+    --first-background-color: #0007C9;
+    --first-text-color: #fff;
+    --first-shadow: 1px 1px 2px #fff, 0 0 0.1rem #fff, 0 0 0.1rem #fff;
+    --border-btn: 1px solid #fff;
+    --border: 2px solid #fff;
+    
+    --second-background-color: #fff;
+    --second-text-color: #0007C9;
+    --second-shadow: 1px 1px 2px  #0007C9, 0 0 0.1rem  #0007C9, 0 0 0.1rem  #0007C9;
+}
+
 body {
-    background: #0007C9;
+    background: var(--first-background-color);
     font-family: Consolas, 'Fira Code', monospace;
-    color: #fff;
-    text-shadow: 1px 1px 2px #fff, 0 0 0.1rem #fff, 0 0 0.1rem #fff;
+    color: var(--first-text-color);
+    text-shadow: var(--first-shadow);
 }
 
 .theme-button {
     margin: 24px 10px;
     border-radius: 4px;
-    background: #0007C9;
-    color: #fff;
-    text-shadow: 1px 1px 2px #fff, 0 0 0.5px #fff, 0 0 0.5px #fff;
-    border: 1px solid #fff;
-    box-shadow: 1px 1px 2px #fff, 0 0 0.1rem #fff, 0 0 0.1rem #fff;
+    background: var(--first-background-color);
+    color: var(--first-text-color);
+    text-shadow: var(--first-shadow);
+    border: var(--border-btn);
+    box-shadow: var(--first-shadow);
     padding: 5px 10px;
     width: 150px;
 }
 
 .theme-button:hover {
-    background-color: #fff;
-    color: #0007C9;
-    text-shadow: 1px 1px 2px #0007C9, 0 0 0.5px #0007C9, 0 0 0.5px #0007C9;
+    background-color: var(--second-background-color);
+    color: var(--second-text-color);
+    text-shadow: var(--second-shadow);
 }
 
 .container-fluid {
@@ -39,14 +51,14 @@ body {
 .card {
     background: none;
     max-width: 30rem;
-    border: 2px solid #fff;
-    box-shadow: 1px 1px 2px #fff, 0 0 0.1rem #fff, 0 0 0.1rem #fff;
+    border: var(--border);
+    box-shadow: var(--first-shadow);
     margin: 50px auto;
 }
 
 .card-header {
-    border-bottom: 2px solid #fff;
-    box-shadow: 1px 1px 2px #fff, 0 0 0.1rem #fff, 0 0 0.1rem #fff;
+    border-bottom: var(--border);
+    box-shadow: var(--first-shadow);
 }
 
 ul, 
@@ -73,20 +85,20 @@ p {
 }
 
 .change-button {
-    background-color: #0007C9;
-    color: #fff;
-    text-shadow: 1px 1px 2px #fff, 0 0 0.5px #fff, 0 0 0.5px #fff;
-    border: 1px solid #fff;
-    box-shadow: 1px 1px 2px #fff, 0 0 0.1rem #fff, 0 0 0.1rem #fff;
+    background-color: var(--first-background-color);
+    color: var(--first-text-color);
+    text-shadow: var(--first-shadow);
+    border: var(--border-btn);
+    box-shadow: var(--first-shadow);
     border-radius: 4px;
     padding: 10px 16px;
     font-size: 20px;
 }
 
 .change-button:hover {
-    background-color: #fff;
-    color: #0007C9;
-    text-shadow: 1px 1px 2px #0007C9, 0 0 0.5px #0007C9, 0 0 0.5px #0007C9;
+    background-color: var(--second-background-color);
+    color: var(--second-text-color);
+    text-shadow: var(--second-shadow);
 }
 
 .temp-card{
@@ -126,16 +138,16 @@ p {
     background: transparent;
     cursor: pointer;
     left: 0;
-    color: #fff;
-    text-shadow: 1px 1px 2px #fff, 0 0 0.5px #fff, 0 0 0.5px #fff;
-    border: 1px solid #fff;
-    box-shadow: 1px 1px 2px #fff, 0 0 0.1rem #fff, 0 0 0.1rem #fff;
+    color: var(--first-text-color);
+    text-shadow: var(--first-shadow);
+    border: var(--border-btn);
+    box-shadow: var(--first-shadow);
 }
 
 #search-btn:hover {
-    background-color: #fff;
-    color: #0007C9;
-    text-shadow: 1px 1px 2px #0007C9, 0 0 0.5px #0007C9, 0 0 0.5px #0007C9;
+    background-color: var(--second-background-color);
+    color: var(--second-text-color);
+    text-shadow: var(--second-shadow);
 }
 
 #city-input {
@@ -150,21 +162,12 @@ p {
     border-radius: 4px;
     font-size: 18px;
     padding-left: 80px;
-    color: #fff;
-    border: 1px solid #fff;
-    box-shadow: 1px 1px 2px #fff, 0 0 0.1rem #fff, 0 0 0.1rem #fff;
+    color: var(--first-text-color);
+    border: var(--border-btn);
+    box-shadow: var(--first-shadow);
 }
 
 #city-input:focus {
     background-color: transparent;
     border: 0;
 }
-
-/*Theme Mood*/
- #terminal {
-    background-color: rgb(0, 0, 0);
-    color: #00FF41;
-    text-shadow: 1px 1px 2px #00FF41, 0 0 0.5px #00FF41, 0 0 0.5px #00FF41;
-    border: 1px solid #00FF41;
-    box-shadow: 1px 1px 2px #00FF41, 0 0 0.1rem #00FF41, 0 0 0.1rem #00FF41;
- }
