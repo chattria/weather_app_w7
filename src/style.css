@@ -171,3 +171,17 @@ p {
     background-color: transparent;
     border: 0;
 }
+
+#info {
+    font-size: 12px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+#info-link {
+    color: var(--first-text-color);
+}
+
+#info-link:hover {
+    color: var(--second-text-color);
+}
