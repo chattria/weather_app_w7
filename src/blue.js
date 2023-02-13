@@ -107,6 +107,24 @@ function formatTime(timestamp) {
     return `${hours}:${minutes}:${seconds}`;
 }
 
+function displayForcast(response) {
+    console.log(response.data);
+    document.querySelector("#tom-degree").innerHTML = Math.round(response.data.daily[1].temp.day);
+    document.querySelector("#day-degree").innerHTML = Math.round(response.data.daily[2].temp.day);
+    document.querySelector("#thi-degree").innerHTML = Math.round(response.data.daily[3].temp.day);
+    document.querySelector("#fou-degree").innerHTML = Math.round(response.data.daily[4].temp.day);
+    document.querySelector("#fif-degree").innerHTML = Math.round(response.data.daily[5].temp.day);
+    document.querySelector("#six-degree").innerHTML = Math.round(response.data.daily[6].temp.day);
+}
+
+function getForecast(coordinate) {
+    console.log(coordinate);
+    let apiKey = "203fa770242fcd2b9555d832a88ea567";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinate.lat}&lon=${coordinate.lon}&appid=${apiKey}&units=metric`;
+    console.log(apiUrl);
+    axios.get(apiUrl).then(displayForcast);
+}
+
 function displayTemperature(response) {
     celciusTemperature = Math.round(response.data.main.temp);
     lowTemperature = Math.floor(response.data.main.temp_min);
@@ -123,6 +141,8 @@ function displayTemperature(response) {
     document.querySelector("#date").innerHTML = formatDate(response.data.dt * 1000);
     document.querySelector("#today").innerHTML = formatDay(response.data.dt * 1000);
     document.querySelector("#time").innerHTML = formatTime(response.data.dt * 1000);
+
+    getForecast (response.data.coord);
 }
 
 function search(city) {
