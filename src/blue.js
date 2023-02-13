@@ -107,8 +107,11 @@ function formatTime(timestamp) {
     return `${hours}:${minutes}:${seconds}`;
 }
 
+function formatDayForecast(timestamp) {
+
+}
+
 function displayForcast(response) {
-    console.log(response.data);
     document.querySelector("#tom-degree").innerHTML = Math.round(response.data.daily[1].temp.day);
     document.querySelector("#day-degree").innerHTML = Math.round(response.data.daily[2].temp.day);
     document.querySelector("#thi-degree").innerHTML = Math.round(response.data.daily[3].temp.day);
@@ -118,7 +121,6 @@ function displayForcast(response) {
 }
 
 function getForecast(coordinate) {
-    console.log(coordinate);
     let apiKey = "203fa770242fcd2b9555d832a88ea567";
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinate.lat}&lon=${coordinate.lon}&appid=${apiKey}&units=metric`;
     console.log(apiUrl);
@@ -171,39 +173,6 @@ function currentLocationButton(event) {
     navigator.geolocation.getCurrentPosition(showCurrentCity);
 }  
 
-function displayFahrenheit(event) {
-    event.preventDefault(); 
-    let fahrenheitTemperatur = (celciusTemperature * 9) / 5 + 32;
-    let temperaturElement = document.querySelector("#temp");
-    temperaturElement.innerHTML = Math.round(fahrenheitTemperatur);
-    
-    let changeFahLow = (lowTemperature *9) / 5 + 32;
-    let changeLowTemp = document.querySelector("#low");
-    changeLowTemp.innerHTML = Math.floor(changeFahLow); 
-
-    let changeFahHigh = (highTemperature *9) / 5 + 32;
-    let changeHighTemp = document.querySelector("#high");
-    changeHighTemp.innerHTML = Math.round(changeFahHigh); 
-
-    let fahrentheitUnit = document.querySelectorAll(".unit");
-    fahrentheitUnit.forEach(element => element.innerHTML = " ºf");
-}
-
-function displayCelcius(event) {
-    event.preventDefault();
-    let temperaturElement = document.querySelector("#temp");
-    temperaturElement.innerHTML = celciusTemperature;
-
-    let changeLowTemp = document.querySelector("#low");
-    changeLowTemp.innerHTML = lowTemperature; 
-
-    let changeHighTemp = document.querySelector("#high");
-    changeHighTemp.innerHTML = highTemperature; 
-
-    let fahrentheitUnit = document.querySelectorAll(".unit");
-    fahrentheitUnit.forEach(element => element.innerHTML = " ºc");
-}
-
 
 let celciusTemperature = null;
 
@@ -212,11 +181,5 @@ currentLocation.addEventListener("click", currentLocationButton);
 
 let form = document.querySelector(".search-city");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitBtn = document.querySelector("#fah-button"); 
-fahrenheitBtn.addEventListener("click", displayFahrenheit);
-
-let celciusBtn = document.querySelector("#cel-button"); 
-celciusBtn.addEventListener("click", displayCelcius);
 
 search("Stockholm");

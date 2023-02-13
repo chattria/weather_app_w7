@@ -117,7 +117,7 @@ p {
 .card .description {
     padding: 20px;
     font-size: 35px;
-    text-transform: lowercase;
+    text-transform: uppercase;
 }
 
 /*Search*/
@@ -172,6 +172,7 @@ p {
     border: 0;
 }
 
+/*End info text*/
 #info {
     font-size: 12px;
     text-align: center;
